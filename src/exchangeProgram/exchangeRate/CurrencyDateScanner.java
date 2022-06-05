@@ -1,4 +1,4 @@
-package exchangeRate;
+package exchangeProgram.exchangeRate;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -39,13 +39,14 @@ public class CurrencyDateScanner {
                     dateTo = userCurrencyArray[2];
                     getAllDays();
                     continueSearching = false;
-                } else {
-                    System.out.println("You entered wrong data. Try again");
-                    System.out.println("Enter the name of the currency you are interested in.\n" +
-                            "If you are interested in a specific date, please enter it.\n" +
-                            "For example: \nAUD\nor \nAUD 01.06.2022-03.06.2022");
                 }
+            } else {
+                System.out.println("You entered wrong data. Try again");
+                System.out.println("Enter the name of the currency you are interested in.\n" +
+                        "If you are interested in a specific date, please enter it.\n" +
+                        "For example: \nAUD\nor \nAUD 01.06.2022-03.06.2022");
             }
+            return;
         }
     }
 

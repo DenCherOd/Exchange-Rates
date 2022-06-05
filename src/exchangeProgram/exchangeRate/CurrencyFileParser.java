@@ -1,11 +1,10 @@
-package exchangeRate;
+package exchangeProgram.exchangeRate;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class CurrencyFileParser {
@@ -27,21 +26,24 @@ public class CurrencyFileParser {
                     for (String currencyInfo : currencyAfterParsing) {
                         if (currencyInfo == currency) {
                             currencyDataList.add(new CurrencyData(currencyAfterParsing[0], currencyAfterParsing[1], Integer.valueOf(currencyAfterParsing[2]),
-                                    currencyAfterParsing[3], Integer.valueOf(currencyAfterParsing[4]), currencyAfterParsing[5], currencyAfterParsing[6]));
-
-
-//                            fr.close();
+                                    currencyAfterParsing[3], Integer.valueOf(currencyAfterParsing[4]), currencyAfterParsing[5], Integer.valueOf(currencyAfterParsing[6])));
+                            fr.close();
                         }
-
-
                     }
                 }
             }
         }
+        int average = 0;
+        for (CurrencyData currencyUah : currencyDataList) {
+            average = currencyUah.getUah() + average;
+        }
+        System.out.println("Средняя стоимости UAH [Ukrainian Hryvnia] к -> 23.1129" + currency + "[" + currencyDataList.get(0).getCurrencyName() +
+                "] -> " + average);
     }
 
-    public void getDataFromFileByDate(String currency, List<String> days) {
 
+
+    public void getDataFromFileByDate(String currency, List<String> days) {
 
     }
 

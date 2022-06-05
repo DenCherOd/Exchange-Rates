@@ -1,4 +1,4 @@
-package exchangeRate;
+package exchangeProgram.exchangeRate;
 
 public class TaskValidator {
     private final String[] params;

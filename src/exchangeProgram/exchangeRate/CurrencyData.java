@@ -1,4 +1,4 @@
-package exchangeRate;
+package exchangeProgram.exchangeRate;
 
 public class CurrencyData {
     private final String date;
@@ -7,9 +7,21 @@ public class CurrencyData {
     private final String letterCode;
     private final Integer unit;
     private final String currencyName;
-    private final String uah;
+    private final Integer uah;
 
-    public CurrencyData(String date, String time, Integer digitalCode, String letterCode, Integer unit, String currencyName, String uah) {
+    public String getLetterCode() {
+        return letterCode;
+    }
+
+    public String getCurrencyName() {
+        return currencyName;
+    }
+
+    public Integer getUah() {
+        return uah;
+    }
+
+    public CurrencyData(String date, String time, Integer digitalCode, String letterCode, Integer unit, String currencyName, Integer uah) {
         this.date = date;
         this.time = time;
         this.digitalCode = digitalCode;

@@ -1,4 +1,4 @@
-package exchangeRate;
+package exchangeProgram.exchangeRate;
 
 import java.io.IOException;
 import java.util.HashMap;

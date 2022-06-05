@@ -1,4 +1,4 @@
-package exchangeRate;
+package exchangeProgram.exchangeRate;
 
 import java.text.NumberFormat;
 import java.text.ParseException;
