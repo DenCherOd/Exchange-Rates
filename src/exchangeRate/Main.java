@@ -11,9 +11,9 @@ public class Main {
 
         HashMap<String, HashMap<String, CurrencyData>> currencyFromFiles = new HashMap<>();
         if(userTaskScanner.getDays().size() > 0){
-            currencyFromFiles = cfp.getDataFromFileByDate(userTaskScanner.currencyLetterCode(), userTaskScanner.getDays());
+            cfp.getDataFromFileByDate(userTaskScanner.currencyLetterCode(), userTaskScanner.getDays());
         } else {
-            currencyFromFiles = cfp.getDataFromFile(userTaskScanner.currencyLetterCode());
+            cfp.getDataFromFile(userTaskScanner.currencyLetterCode());
         }
     }
 }

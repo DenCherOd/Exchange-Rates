@@ -39,7 +39,6 @@ public class CurrencyDateScanner {
                     dateTo = userCurrencyArray[2];
                     getAllDays();
                     continueSearching = false;
-
                 } else {
                     System.out.println("You entered wrong data. Try again");
                     System.out.println("Enter the name of the currency you are interested in.\n" +

@@ -5,18 +5,18 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Arrays;
 import java.util.List;
 
 public class CurrencyFileParser {
 
-    private CurrencyData currencyData;
+    List<CurrencyData> currencyDataList= new ArrayList<>();
 
-    public HashMap<String, HashMap<String, CurrencyData>> getDataFromFile(String currency) throws IOException {
+    public void getDataFromFile(String currency) throws IOException {
         List<File> allFiles = listFilesForFolder(new File(System.getProperty("user.dir") + "/src/files"));
-        HashMap<String, CurrencyData> currencyDataBy = new HashMap<>();
+        currencyDataList = new ArrayList<>();
         for (File file : allFiles) {
-            while (file.exists()) {
+            if (file.exists()) {
                 FileReader fr = new FileReader(file);
                 BufferedReader br = new BufferedReader(fr);
                 String line;
@@ -26,7 +26,8 @@ public class CurrencyFileParser {
                     String[] currencyAfterParsing = line.split("|");
                     for (String currencyInfo : currencyAfterParsing) {
                         if (currencyInfo == currency) {
-
+                            currencyDataList.add(new CurrencyData(currencyAfterParsing[0], currencyAfterParsing[1], Integer.valueOf(currencyAfterParsing[2]),
+                                    currencyAfterParsing[3], Integer.valueOf(currencyAfterParsing[4]), currencyAfterParsing[5], currencyAfterParsing[6]));
 
 
 //                            fr.close();
@@ -37,12 +38,11 @@ public class CurrencyFileParser {
                 }
             }
         }
-        return null;
     }
 
-    public HashMap<String, HashMap<String, CurrencyData>> getDataFromFileByDate(String currency, List<String> days) {
+    public void getDataFromFileByDate(String currency, List<String> days) {
 
-        return null;
+
     }
 
     public List<File> listFilesForFolder(File folder) {
