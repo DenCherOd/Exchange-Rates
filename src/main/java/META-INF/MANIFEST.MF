@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Package: exchangeProgram.exchangeRate
+Created-By: Denys
+Main-Class: exchangeProgram.exchangeRate.Main
+

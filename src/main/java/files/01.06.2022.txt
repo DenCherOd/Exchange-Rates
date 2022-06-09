@@ -1,0 +1,4 @@
+| Date	        | Time	| Digital code | Letter code |	Unit   |	Currency name	| "UAH"   |
+|01.06.2022 |00.00 |036 |AUD| 1 |Australian Dollar |20.9948|
+|01.06.2022 |00.00 |944 |AZN| 1 |Azerbaijan Manat |17.2524|
+|01.06.2022 |00.00 |933 |BYN| 1 |Belarusian Ruble |10.6335|
